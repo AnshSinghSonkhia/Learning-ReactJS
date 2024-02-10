@@ -10,10 +10,15 @@
 npm create vite@latest
 ```
 
-2. Install & run
+2. Install
 
 ```shell
 npm install
+```
+
+3. Run
+
+```shell
 npm run dev
 ```
 
