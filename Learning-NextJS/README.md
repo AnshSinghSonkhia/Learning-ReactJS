@@ -1,7 +1,5 @@
 # The Top-Notch React+Next.js Notes - Ansh Singh Sonkhia
 
-https://www.youtube.com/watch?v=HxxN6AdEop0
-
 ## Two Way Binding
 
 In React, two-way binding refers to the synchronization of data between a form input element and the component's state. It allows changes made to the input field by the user to automatically update the component's state, and vice versa. 
@@ -61,4 +59,57 @@ In summary, Fetch API is lightweight and native to the browser, while Axios is a
 
 ## Context API
 
-1:00:00
+```js
+createContext()
+```
+
+- We don't want mediators in our conversation between 2 components. Otherwise, these mediators will have access to our data, thus decreasing security of app data.
+
+```js
+import React, { createContext } from 'react';
+export const MyContext = createContext()
+```
+
+-- `layout.js` would look like this:
+
+```js
+import { Inter } from "next/font/google";
+import "./globals.css";
+import MyContext from "@/Helper/Context";   // <--
+
+const inter = Inter({ subsets: ["latin"] });
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+        <body suppressHydrationWarning className={inter.className}>
+            <MyContext> 
+                {children}
+            </MyContext>
+        </body>
+    </html>
+  );
+}
+```
+
+- Remember, MyContext should be imported like this:
+
+```js
+import MyContext from "@/Helper/Context"; 
+```
+
+- access data using `useContext()`
+
+```js
+const user = useContext(MyContext)
+```
+
+## Showing Flash Messages (React Toastify)
+
+## Server Side Rendering (SSR) vs Client Side Rendering (CSR)
+
+## Deployment options:
+
+- onRender (Render .com)
+- Netlify
+- Vercel
