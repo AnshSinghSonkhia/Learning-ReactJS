@@ -1,0 +1,29 @@
+{
+  "name": "learning-next-react",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "characters-counter": "^1.0.2",
+    "complimentary-color": "^1.0.0",
+    "fast-currency-transformer": "^1.0.4",
+    "generate-cdn": "^1.0.0",
+    "next": "14.1.3",
+    "random-math": "^1.0.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "thousand-colors": "^1.0.6",
+    "total-npm-downloads": "^1.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}
